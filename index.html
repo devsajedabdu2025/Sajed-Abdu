@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sajed Abdu | Front-end Developer</title>
-    <meta name="description" content="Personal website of Sajed Abdu — a front-end developer from Gaza, Palestine, building modern, fast, and responsive web interfaces.">
+
+    <!-- ===== SEO ===== -->
+    <title>Sajed Abdu | Web &amp; Front-End Developer</title>
+    <meta name="description" content="Sajed Abdu — web and front-end developer from Gaza, Palestine. I build fast, responsive websites with HTML, CSS, JavaScript, Bootstrap, PHP and MySQL.">
+    <meta name="author" content="Sajed Abdu">
+    <meta name="keywords" content="Sajed Abdu, front-end developer, web developer, HTML, CSS, JavaScript, Bootstrap, PHP, MySQL, Gaza, Palestine, portfolio">
+    <meta name="theme-color" content="#0b1120">
+    <link rel="canonical" href="https://devsajedabdu2025.github.io/Sajed-Abdu/">
+
+    <!-- ===== معاينة الرابط عند مشاركته (واتساب / لينكدإن / فيسبوك) ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sajed Abdu | Web &amp; Front-End Developer">
+    <meta property="og:description" content="Web and front-end developer from Gaza, Palestine. HTML, CSS, JavaScript, Bootstrap, PHP and MySQL.">
+    <meta property="og:url" content="https://devsajedabdu2025.github.io/Sajed-Abdu/">
+    <meta property="og:image" content="https://devsajedabdu2025.github.io/Sajed-Abdu/images/profile.jpeg">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sajed Abdu | Web &amp; Front-End Developer">
+    <meta name="twitter:description" content="Web and front-end developer from Gaza, Palestine. HTML, CSS, JavaScript, Bootstrap, PHP and MySQL.">
+    <meta name="twitter:image" content="https://devsajedabdu2025.github.io/Sajed-Abdu/images/profile.jpeg">
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
     <!-- الخطوط والأيقونات -->
@@ -27,15 +46,37 @@
             document.documentElement.dataset.theme = theme;
         })();
     </script>
+
+    <!-- بيانات منظمة لمحركات البحث (Google) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sajed Abdu",
+        "jobTitle": "Web & Front-End Developer",
+        "email": "mailto:devsajedabdu2025@gmail.com",
+        "url": "https://devsajedabdu2025.github.io/Sajed-Abdu/",
+        "image": "https://devsajedabdu2025.github.io/Sajed-Abdu/images/profile.jpeg",
+        "address": { "@type": "PostalAddress", "addressLocality": "Gaza", "addressCountry": "Palestine" },
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "Git", "GitHub"],
+        "sameAs": [
+            "https://github.com/devsajedabdu2025",
+            "https://www.linkedin.com/in/sajed-abdu-07357841b"
+        ]
+    }
+    </script>
 </head>
 <body>
+
+    <!-- رابط لتخطي القائمة (يظهر عند التنقل بلوحة المفاتيح) -->
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- ================= الهيدر ================= -->
     <header class="header" id="header">
         <div class="container nav-wrapper">
-            <a href="#home" class="logo">Sajed<span>.</span></a>
+            <a href="#home" class="logo" aria-label="Sajed Abdu — home">Sajed<span>.</span></a>
 
-            <nav class="nav" id="nav">
+            <nav class="nav" id="nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -48,21 +89,21 @@
 
             <div class="nav-actions">
                 <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fa-solid fa-sun"></i>
-                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
                 </button>
                 <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Talk</a>
-                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
-                    <i class="fa-solid fa-bars"></i>
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
         <!-- ================= الرئيسية ================= -->
-        <section class="hero" id="home">
+        <section class="hero" id="home" aria-labelledby="heroTitle">
             <div class="hero-bg" aria-hidden="true">
                 <span class="blob blob-1"></span>
                 <span class="blob blob-2"></span>
@@ -71,49 +112,49 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
-                        <span class="badge reveal"><span class="dot"></span> Available for new projects</span>
+                        <span class="badge reveal"><span class="dot" aria-hidden="true"></span> Available for freelance &amp; junior roles</span>
 
-                        <h1 class="hero-title reveal" style="--delay:.1s">
+                        <h1 class="hero-title reveal" id="heroTitle" style="--delay:.1s">
                             Hi, I'm <span class="gradient-text">Sajed Abdu</span>
                         </h1>
 
-                        <h2 class="hero-role reveal" style="--delay:.2s">
-                            <span class="typed" data-words='["Front-end Developer", "Interactive UI Builder", "Responsive Web Specialist"]'>Front-end Developer</span>
-                        </h2>
+                        <p class="hero-role reveal" style="--delay:.2s">
+                            <span class="typed" data-words='["Web Developer", "Front-End Developer", "IT Student at UCAS"]'>Web Developer</span>
+                        </p>
 
                         <p class="hero-text reveal" style="--delay:.3s">
-                            I design and build modern, fast, and responsive websites that look great on
-                            every screen — turning designs and ideas into web experiences people love to use.
+                            I build fast, responsive websites with HTML, CSS, JavaScript and Bootstrap —
+                            and connect them to a database with PHP and MySQL when a project needs it.
                         </p>
 
                         <div class="hero-buttons reveal" style="--delay:.4s">
-                            <a href="#contact" class="btn btn-primary">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#contact" class="btn btn-primary">Get in Touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                             <a href="#projects" class="btn btn-outline">View My Work</a>
                         </div>
 
                         <!-- الروابط التي قيمتها # مخفية تلقائياً: ضع رابط حسابك الحقيقي بدل # ليظهر الأيقون -->
                         <div class="socials reveal" style="--delay:.5s">
-                            <a href="https://wa.me/972567757096" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="mailto:devsajedabdu2025@gmail.com" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                            <a href="#" class="social-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/sajed-abdu-07a57841b" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link" aria-label="X" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/devsajedabdu2025" class="social-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/sajed-abdu-07357841b" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a href="https://wa.me/972567757096" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                            <a href="mailto:devsajedabdu2025@gmail.com" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link" aria-label="X" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
                     <div class="hero-visual reveal" style="--delay:.2s">
                         <div class="avatar-wrap">
-                            <span class="avatar-ring"></span>
+                            <span class="avatar-ring" aria-hidden="true"></span>
                             <div class="avatar">
                                 <div class="avatar-inner">
                                     <!-- لتغيير الصورة: استبدل الملف images/profile.jpeg -->
-                                    <img src="images/profile.jpeg" alt="Sajed Abdu" width="885" height="1600">
+                                    <img src="images/profile.jpeg" alt="Portrait of Sajed Abdu" width="885" height="1600" fetchpriority="high">
                                 </div>
                             </div>
 
                             <div class="float-card fc-1">
-                                <span class="fc-icon"><i class="fa-solid fa-laptop-code"></i></span>
+                                <span class="fc-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
                                 <div>
                                     <strong>Front-end Dev</strong>
                                     <small>HTML · CSS · JavaScript</small>
@@ -121,17 +162,21 @@
                             </div>
 
                             <div class="float-card fc-2">
-                                <span class="fc-icon"><i class="fa-solid fa-star"></i></span>
+                                <span class="fc-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
                                 <div>
-                                    <strong>Clean Code</strong>
-                                    <small>Pixel-perfect UI</small>
+                                    <strong>PHP &amp; MySQL</strong>
+                                    <small>Database-driven pages</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- الإحصائيات: عدّل الأرقام في data-target -->
+                <!--
+                    ===== شريط الأرقام (مخفي حالياً) =====
+                    أخفيناه لأن الأرقام كانت تقديرية وغير حقيقية.
+                    عندما تصبح لديك أرقام حقيقية: احذف سطر البداية وسطر النهاية لهذا التعليق، ثم عدّل data-target.
+
                 <div class="stats">
                     <div class="stat reveal">
                         <div class="stat-number gradient-text"><span class="counter" data-target="3">0</span>+</div>
@@ -150,94 +195,109 @@
                         <div class="stat-label">Technologies</div>
                     </div>
                 </div>
+                -->
             </div>
         </section>
 
         <!-- ================= من أنا ================= -->
-        <section class="section" id="about">
+        <section class="section" id="about" aria-labelledby="aboutTitle">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-tag"><i class="fa-solid fa-user"></i> About Me</span>
-                    <h2 class="section-title">Get to Know <span class="gradient-text">Me</span></h2>
-                    <p class="section-desc">Passionate about crafting interfaces that are beautiful, fast, and easy to use.</p>
+                    <span class="section-tag"><i class="fa-solid fa-user" aria-hidden="true"></i> About Me</span>
+                    <h2 class="section-title" id="aboutTitle">Get to Know <span class="gradient-text">Me</span></h2>
+                    <p class="section-desc">A web developer who cares about clean code, clear layouts and a smooth experience on every screen.</p>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-text reveal">
-                        <h3>A front-end developer who turns designs into memorable digital experiences</h3>
+                        <h3>Web developer and IT student turning ideas into real websites</h3>
                         <p>
-                            I'm a front-end developer focused on building everything users see and interact with
-                            on a website — using HTML, CSS, JavaScript, and modern tools like React and Tailwind CSS.
+                            I'm Sajed Abdu, a web developer from Gaza, Palestine, studying Information Technology
+                            at the University College of Applied Sciences. I build the part of a website that people
+                            actually see and use — with HTML, CSS, JavaScript and Bootstrap.
                         </p>
                         <p>
-                            I believe a great interface blends beautiful design, fast performance, and effortless
-                            usability. That's why I care about every detail — from spacing and color to animations
-                            and how it feels on mobile.
+                            I also work with PHP and MySQL to connect pages to a database, and I use Git and GitHub
+                            to keep my code organized and versioned. I'm looking for freelance work and a junior
+                            developer role where I can keep learning and build real products.
                         </p>
 
                         <ul class="highlights">
-                            <li><i class="fa-solid fa-circle-check"></i> Clean, organized code</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Responsive on every screen</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Pixel-perfect implementation</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Always on time</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Clean, organized code</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Responsive on every screen</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Semantic, accessible HTML</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Fast learner, open to feedback</li>
                         </ul>
 
                         <div class="hero-buttons">
-                            <a href="#contact" class="btn btn-primary">Contact Me <i class="fa-solid fa-arrow-right"></i></a>
-                            <a href="https://wa.me/972567757096" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                            <a href="#contact" class="btn btn-primary">Contact Me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="https://wa.me/972567757096" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
                             <!-- زر السيرة الذاتية مخفي: ضع ملف cv.pdf بجانب index.html ثم غيّر href="#" إلى href="cv.pdf" -->
-                            <a href="#" class="btn btn-outline" download>Download CV <i class="fa-solid fa-download"></i></a>
+                            <a href="#" class="btn btn-outline" download>Download CV <i class="fa-solid fa-download" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
-                    <aside class="info-card reveal" style="--delay:.15s">
-                        <h4><i class="fa-solid fa-id-card"></i> Personal Info</h4>
+                    <aside class="info-card reveal" style="--delay:.15s" aria-label="Personal information">
+                        <h3><i class="fa-solid fa-id-card" aria-hidden="true"></i> Personal Info</h3>
                         <ul class="info-list">
-                            <li><span><i class="fa-solid fa-user"></i> Name</span><strong>Sajed Nasser Abdu</strong></li>
-                            <li><span><i class="fa-solid fa-code"></i> Role</span><strong>Front-end Developer</strong></li>
-                            <li><span><i class="fa-solid fa-envelope"></i> Email</span><strong>devsajedabdu2025@gmail.com</strong></li>
-                            <li><span><i class="fa-solid fa-location-dot"></i> Location</span><strong>Gaza, Palestine</strong></li>
-                            <li><span><i class="fa-solid fa-language"></i> Languages</span><strong>Arabic, English</strong></li>
-                            <li><span><i class="fa-solid fa-circle-dot"></i> Status</span><strong class="available">Available for work</strong></li>
+                            <li><span><i class="fa-solid fa-user" aria-hidden="true"></i> Name</span><strong>Sajed Nasser Abdu</strong></li>
+                            <li><span><i class="fa-solid fa-code" aria-hidden="true"></i> Role</span><strong>Web &amp; Front-End Developer</strong></li>
+                            <li><span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Study</span><strong>IT — UCAS</strong></li>
+                            <li><span><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</span><strong>devsajedabdu2025@gmail.com</strong></li>
+                            <li><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Location</span><strong>Gaza, Palestine</strong></li>
+                            <li><span><i class="fa-solid fa-language" aria-hidden="true"></i> Languages</span><strong>Arabic, English</strong></li>
+                            <li><span><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> Status</span><strong class="available">Available for work</strong></li>
                         </ul>
                     </aside>
                 </div>
 
-                <!-- التعليم والخبرة -->
+                <!-- التعليم والمشاريع -->
                 <div class="timeline-grid">
                     <div class="timeline-col reveal">
-                        <h3><span class="tl-icon"><i class="fa-solid fa-graduation-cap"></i></span> Education</h3>
+                        <h3><span class="tl-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span> Education</h3>
                         <div class="timeline">
                             <div class="timeline-item">
                                 <span class="timeline-date">2025 — 2027</span>
-                                <h4>B.Sc. in Information Technology</h4>
+                                <h4>Information Technology</h4>
                                 <span class="timeline-place">University College of Applied Sciences</span>
-                                <p>Studied programming, web development, and user interface design. Graduation project: the “Smart City” platform.</p>
+                                <p>Studying programming, web development and databases, with hands-on projects in HTML, CSS, JavaScript, PHP and MySQL.</p>
                             </div>
+                            <!--
+                                ===== قالب جاهز: انسخه وعدّله عند إضافة دورة حقيقية =====
                             <div class="timeline-item">
-                                <span class="timeline-date">2023</span>
-                                <h4>Front-end Development Course</h4>
-                                <span class="timeline-place">Learning Platform Name</span>
-                                <p>An intensive course covering HTML, CSS, JavaScript, and React — building responsive, interactive interfaces from scratch.</p>
+                                <span class="timeline-date">Year</span>
+                                <h4>Course name</h4>
+                                <span class="timeline-place">Platform / Institute</span>
+                                <p>What you learned, in one short sentence.</p>
                             </div>
+                            -->
                         </div>
                     </div>
 
                     <div class="timeline-col reveal" style="--delay:.15s">
-                        <h3><span class="tl-icon"><i class="fa-solid fa-briefcase"></i></span> Experience</h3>
+                        <h3><span class="tl-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span> Practice &amp; Projects</h3>
                         <div class="timeline">
                             <div class="timeline-item">
-                                <span class="timeline-date">2024 — Present</span>
-                                <h4>Freelance Front-end Developer</h4>
-                                <span class="timeline-place">Self-employed</span>
-                                <p>Turning client designs into responsive websites, landing pages, and dashboards — from the first line of code to launch.</p>
+                                <span class="timeline-date">2026</span>
+                                <h4>Personal Portfolio Website</h4>
+                                <span class="timeline-place">Self-built · Published on GitHub Pages</span>
+                                <p>Designed and coded this site from scratch with vanilla HTML, CSS and JavaScript: dark mode, responsive layout and a working contact form.</p>
                             </div>
                             <div class="timeline-item">
-                                <span class="timeline-date">2023 — 2024</span>
-                                <h4>Front-end Intern</h4>
-                                <span class="timeline-place">Company Name</span>
-                                <p>Helped build internal interfaces and dashboards while collaborating with a team using Git and Figma.</p>
+                                <span class="timeline-date">2026</span>
+                                <h4>Smart City Platform — College Project</h4>
+                                <span class="timeline-place">University College of Applied Sciences</span>
+                                <p>Built the interfaces of a citizen reporting platform with separate dashboards for admin, supervisor and officer roles.</p>
                             </div>
+                            <!--
+                                ===== قالب جاهز: انسخه وعدّله عند إضافة خبرة أو تدريب حقيقي =====
+                            <div class="timeline-item">
+                                <span class="timeline-date">2023 — 2024</span>
+                                <h4>Job title</h4>
+                                <span class="timeline-place">Company name</span>
+                                <p>What you did there, in one short sentence.</p>
+                            </div>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -245,18 +305,18 @@
         </section>
 
         <!-- ================= المهارات ================= -->
-        <section class="section section-alt" id="skills">
+        <section class="section section-alt" id="skills" aria-labelledby="skillsTitle">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-tag"><i class="fa-solid fa-bolt"></i> Skills</span>
-                    <h2 class="section-title">My Technical <span class="gradient-text">Skills</span></h2>
-                    <p class="section-desc">The technologies and tools I use every day to build solid, reliable interfaces.</p>
+                    <span class="section-tag"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Skills</span>
+                    <h2 class="section-title" id="skillsTitle">My Technical <span class="gradient-text">Skills</span></h2>
+                    <p class="section-desc">The technologies I use to build and publish websites.</p>
                 </div>
 
-                <!-- عدّل نسبة كل مهارة من data-level -->
+                <!-- عدّل نسبة كل مهارة من data-level (وغيّر الرقم المكتوب بجانبها أيضاً) -->
                 <div class="skills-grid">
                     <div class="skill-card reveal">
-                        <h3><span class="tl-icon"><i class="fa-solid fa-code"></i></span> Fundamentals</h3>
+                        <h3><span class="tl-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span> Front-End</h3>
                         <div class="skill">
                             <div class="skill-info"><span>HTML5</span><span>95%</span></div>
                             <div class="skill-bar"><span class="skill-fill" data-level="95"></span></div>
@@ -266,269 +326,294 @@
                             <div class="skill-bar"><span class="skill-fill" data-level="90"></span></div>
                         </div>
                         <div class="skill">
-                            <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
+                            <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+                            <div class="skill-bar"><span class="skill-fill" data-level="80"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>Bootstrap</span><span>85%</span></div>
                             <div class="skill-bar"><span class="skill-fill" data-level="85"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card reveal" style="--delay:.15s">
+                        <h3><span class="tl-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span> Back-End &amp; Tools</h3>
+                        <div class="skill">
+                            <div class="skill-info"><span>PHP</span><span>70%</span></div>
+                            <div class="skill-bar"><span class="skill-fill" data-level="70"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>MySQL</span><span>70%</span></div>
+                            <div class="skill-bar"><span class="skill-fill" data-level="70"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>Git &amp; GitHub</span><span>75%</span></div>
+                            <div class="skill-bar"><span class="skill-fill" data-level="75"></span></div>
                         </div>
                         <div class="skill">
                             <div class="skill-info"><span>Responsive Design</span><span>90%</span></div>
                             <div class="skill-bar"><span class="skill-fill" data-level="90"></span></div>
                         </div>
                     </div>
-
-                    <div class="skill-card reveal" style="--delay:.15s">
-                        <h3><span class="tl-icon"><i class="fa-solid fa-layer-group"></i></span> Libraries &amp; Tools</h3>
-                        <div class="skill">
-                            <div class="skill-info"><span>React</span><span>75%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" data-level="75"></span></div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-info"><span>Tailwind CSS</span><span>85%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" data-level="85"></span></div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-info"><span>Bootstrap</span><span>90%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" data-level="90"></span></div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-info"><span>Git &amp; GitHub</span><span>80%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" data-level="80"></span></div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="tools reveal">
-                    <span class="tool"><i class="fa-brands fa-html5"></i> HTML5</span>
-                    <span class="tool"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-                    <span class="tool"><i class="fa-brands fa-js"></i> JavaScript</span>
-                    <span class="tool"><i class="fa-brands fa-react"></i> React</span>
-                    <span class="tool"><i class="fa-solid fa-wind"></i> Tailwind</span>
-                    <span class="tool"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
-                    <span class="tool"><i class="fa-brands fa-git-alt"></i> Git</span>
-                    <span class="tool"><i class="fa-brands fa-github"></i> GitHub</span>
+                    <span class="tool"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
+                    <span class="tool"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                    <span class="tool"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                    <span class="tool"><i class="fa-brands fa-bootstrap" aria-hidden="true"></i> Bootstrap</span>
+                    <span class="tool"><i class="fa-brands fa-php" aria-hidden="true"></i> PHP</span>
+                    <span class="tool"><i class="fa-solid fa-database" aria-hidden="true"></i> MySQL</span>
+                    <span class="tool"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</span>
+                    <span class="tool"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</span>
+                    <span class="tool"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Responsive</span>
                 </div>
             </div>
         </section>
 
         <!-- ================= الخدمات ================= -->
-        <section class="section" id="services">
+        <section class="section" id="services" aria-labelledby="servicesTitle">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Services</span>
-                    <h2 class="section-title">How Can I <span class="gradient-text">Help You?</span></h2>
-                    <p class="section-desc">Specialized front-end services that make your website beautiful, fast, and easy to use.</p>
+                    <span class="section-tag"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Services</span>
+                    <h2 class="section-title" id="servicesTitle">How Can I <span class="gradient-text">Help You?</span></h2>
+                    <p class="section-desc">Web development services that make your site clear, fast and easy to use on any device.</p>
                 </div>
 
                 <div class="services-grid">
                     <article class="service-card reveal">
-                        <span class="service-num">01</span>
-                        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                        <span class="service-num" aria-hidden="true">01</span>
+                        <div class="service-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
                         <h3>Website Development</h3>
-                        <p>Fast, responsive business and portfolio websites built with clean code and modern standards.</p>
+                        <p>Responsive business and portfolio websites built with clean HTML, CSS, JavaScript and Bootstrap.</p>
                     </article>
                     <article class="service-card reveal" style="--delay:.1s">
-                        <span class="service-num">02</span>
-                        <div class="service-icon"><i class="fa-brands fa-figma"></i></div>
+                        <span class="service-num" aria-hidden="true">02</span>
+                        <div class="service-icon"><i class="fa-brands fa-figma" aria-hidden="true"></i></div>
                         <h3>Design to Code</h3>
-                        <p>Converting Figma and Adobe XD designs into real web pages that match the design pixel for pixel.</p>
+                        <p>Turning a Figma or Adobe XD design into a real web page that matches the design closely.</p>
                     </article>
                     <article class="service-card reveal" style="--delay:.2s">
-                        <span class="service-num">03</span>
-                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <span class="service-num" aria-hidden="true">03</span>
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
                         <h3>Responsive Design</h3>
-                        <p>Interfaces that work smoothly on phones, tablets, and desktops without compromising on quality.</p>
+                        <p>Layouts that work smoothly on phones, tablets and desktops without losing quality.</p>
                     </article>
                     <article class="service-card reveal">
-                        <span class="service-num">04</span>
-                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                        <h3>Interactive UI</h3>
-                        <p>Smooth animations and interactive effects with JavaScript and React that make every visit enjoyable.</p>
+                        <span class="service-num" aria-hidden="true">04</span>
+                        <div class="service-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                        <h3>PHP &amp; MySQL Pages</h3>
+                        <p>Contact forms, login pages and simple dashboards connected to a MySQL database with PHP.</p>
                     </article>
                     <article class="service-card reveal" style="--delay:.1s">
-                        <span class="service-num">05</span>
-                        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
-                        <h3>Performance &amp; SEO</h3>
-                        <p>Faster load times and better search engine visibility to bring in more visitors and clients.</p>
+                        <span class="service-num" aria-hidden="true">05</span>
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+                        <h3>Interactive UI</h3>
+                        <p>Smooth animations and interactive effects with vanilla JavaScript — no heavy libraries.</p>
                     </article>
                     <article class="service-card reveal" style="--delay:.2s">
-                        <span class="service-num">06</span>
-                        <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <h3>Landing Pages</h3>
-                        <p>Eye-catching marketing pages designed to turn visitors into customers, with a seamless mobile experience.</p>
+                        <span class="service-num" aria-hidden="true">06</span>
+                        <div class="service-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+                        <h3>Speed &amp; SEO Basics</h3>
+                        <p>Lighter pages, proper meta tags and semantic HTML so search engines can read your site.</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- ================= أعمالي ================= -->
-        <section class="section section-alt" id="projects">
+        <section class="section section-alt" id="projects" aria-labelledby="projectsTitle">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Portfolio</span>
-                    <h2 class="section-title">Projects I'm <span class="gradient-text">Proud Of</span></h2>
-                    <p class="section-desc">A selection of projects I've worked on recently.</p>
+                    <span class="section-tag"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Portfolio</span>
+                    <h2 class="section-title" id="projectsTitle">Projects I've <span class="gradient-text">Built</span></h2>
+                    <p class="section-desc">Real projects I worked on. More are on the way as I build them.</p>
                 </div>
 
-                <div class="filters reveal">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Websites</button>
-                    <button class="filter-btn" data-filter="dashboards">Dashboards</button>
-                    <button class="filter-btn" data-filter="apps">Web Apps</button>
+                <div class="filters reveal" role="group" aria-label="Filter projects">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="web">Websites</button>
+                    <button type="button" class="filter-btn" data-filter="dashboards">Dashboards</button>
+                    <button type="button" class="filter-btn" data-filter="apps">Web Apps</button>
                 </div>
 
                 <!-- روابط Live Demo و Code مخفية ما دامت قيمتها # — ضع الرابط الحقيقي لتظهر -->
                 <div class="projects-grid">
-                    <article class="project-card reveal" data-category="dashboards">
+                    <article class="project-card reveal" data-category="web">
                         <div class="project-thumb thumb-1">
-                            <span class="thumb-dots"><i></i><i></i><i></i></span>
-                            <i class="fa-solid fa-city"></i>
+                            <span class="thumb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <img class="thumb-img" src="images/project-portfolio.png" alt="Screenshot of the Sajed Abdu portfolio website" loading="lazy" decoding="async">
                         </div>
                         <div class="project-body">
                             <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                            <h3>Smart City Platform UI</h3>
-                            <p>Designed and built the interfaces for a citizen reporting platform, with responsive dashboards for admins, supervisors, and officers.</p>
+                            <h3>Personal Portfolio Website</h3>
+                            <p>This website: built from scratch with vanilla HTML, CSS and JavaScript — dark mode, responsive layout, scroll animations and a contact form that sends real messages.</p>
                             <div class="project-links">
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://devsajedabdu2025.github.io/Sajed-Abdu/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="https://github.com/devsajedabdu2025/Sajed-Abdu" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card reveal" data-category="web" style="--delay:.1s">
-                        <div class="project-thumb thumb-2">
-                            <span class="thumb-dots"><i></i><i></i><i></i></span>
-                            <i class="fa-solid fa-cart-shopping"></i>
+                    <article class="project-card reveal" data-category="dashboards" style="--delay:.1s">
+                        <div class="project-thumb thumb-4">
+                            <span class="thumb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <i class="fa-solid fa-city" aria-hidden="true"></i>
                         </div>
                         <div class="project-body">
-                            <div class="project-tags"><span>React</span><span>Tailwind CSS</span></div>
-                            <h3>E-commerce Storefront</h3>
-                            <p>A modern storefront with an interactive shopping cart, product filtering, and a smooth checkout on any device.</p>
+                            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
+                            <h3>Smart City Platform UI</h3>
+                            <p>A citizen reporting platform built as a college project, with separate responsive dashboards for admin, supervisor and officer roles.</p>
+                            <!-- عند رفع المشروع على GitHub: ضع الرابط بدل # ليظهر الزر -->
                             <div class="project-links">
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card reveal" data-category="web" style="--delay:.2s">
+                    <!--
+                        ============================================================
+                        قوالب جاهزة لمشاريعك القادمة (لا تظهر في الموقع الآن)
+                        انسخ أي بطاقة من هنا، ضعها فوق هذا التعليق، وعدّل:
+                        - data-category: web أو dashboards أو apps
+                        - thumb-1 ... thumb-6 لتغيير لون الخلفية
+                        - أو ضع صورة حقيقية بدل الأيقونة:
+                          img class="thumb-img" src="images/your-image.png" alt="وصف الصورة" loading="lazy"
+                        - الاسم والوصف وروابط Live Demo و Code
+                        ============================================================
+
+                    <article class="project-card reveal" data-category="web">
+                        <div class="project-thumb thumb-2">
+                            <span class="thumb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                            <h3>E-commerce Storefront</h3>
+                            <p>A storefront with an interactive shopping cart, product filtering and a smooth checkout on any device.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="web">
                         <div class="project-thumb thumb-3">
-                            <span class="thumb-dots"><i></i><i></i><i></i></span>
-                            <i class="fa-solid fa-rocket"></i>
+                            <span class="thumb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
                         </div>
                         <div class="project-body">
                             <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                             <h3>Startup Landing Page</h3>
-                            <p>A modern marketing page with smooth animations and a layout focused on turning visitors into customers.</p>
+                            <p>A marketing page with smooth animations and a layout focused on turning visitors into customers.</p>
                             <div class="project-links">
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card reveal" data-category="dashboards">
-                        <div class="project-thumb thumb-4">
-                            <span class="thumb-dots"><i></i><i></i><i></i></span>
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-tags"><span>JavaScript</span><span>Chart.js</span><span>Sass</span></div>
-                            <h3>Analytics Dashboard</h3>
-                            <p>A dashboard interface with interactive charts, dark mode, and a fully responsive layout.</p>
-                            <div class="project-links">
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal" data-category="apps" style="--delay:.1s">
+                    <article class="project-card reveal" data-category="apps">
                         <div class="project-thumb thumb-5">
-                            <span class="thumb-dots"><i></i><i></i><i></i></span>
-                            <i class="fa-solid fa-cloud-sun"></i>
+                            <span class="thumb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <i class="fa-solid fa-cloud-sun" aria-hidden="true"></i>
                         </div>
                         <div class="project-body">
                             <div class="project-tags"><span>JavaScript</span><span>API</span><span>CSS</span></div>
                             <h3>Weather App</h3>
-                            <p>Shows real-time weather for any city by fetching data from a public API, wrapped in a clean, friendly design.</p>
+                            <p>Shows live weather for any city by fetching data from a public API, in a clean and friendly design.</p>
                             <div class="project-links">
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card reveal" data-category="apps" style="--delay:.2s">
+                    <article class="project-card reveal" data-category="apps">
                         <div class="project-thumb thumb-6">
-                            <span class="thumb-dots"><i></i><i></i><i></i></span>
-                            <i class="fa-solid fa-list-check"></i>
+                            <span class="thumb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <i class="fa-solid fa-list-check" aria-hidden="true"></i>
                         </div>
                         <div class="project-body">
-                            <div class="project-tags"><span>React</span><span>LocalStorage</span></div>
+                            <div class="project-tags"><span>JavaScript</span><span>LocalStorage</span></div>
                             <h3>Task Manager App</h3>
-                            <p>A sleek app for organizing daily tasks, with drag-and-drop and automatic saving in the browser.</p>
+                            <p>An app for organizing daily tasks, saved automatically in the browser.</p>
                             <div class="project-links">
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
                             </div>
                         </div>
                     </article>
+                    -->
                 </div>
+
+                <!-- رسالة تظهر إذا لم يكن في التصنيف المختار أي مشروع -->
+                <p class="projects-empty" id="projectsEmpty" hidden>No projects in this category yet — more are coming soon.</p>
             </div>
         </section>
 
         <!-- ================= تواصل معي ================= -->
-        <section class="section" id="contact">
+        <section class="section" id="contact" aria-labelledby="contactTitle">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Contact</span>
-                    <h2 class="section-title">Let's Build Your Next <span class="gradient-text">Project</span></h2>
-                    <p class="section-desc">Have an idea or a project in mind? I'd love to hear about it and will get back to you soon.</p>
+                    <span class="section-tag"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact</span>
+                    <h2 class="section-title" id="contactTitle">Let's Build Your Next <span class="gradient-text">Project</span></h2>
+                    <p class="section-desc">Have an idea, a project or a job offer? Send me a message and I'll reply soon.</p>
                 </div>
 
                 <div class="contact-grid">
                     <div class="contact-info reveal">
                         <div class="contact-intro">
                             <h3>Let's talk 👋</h3>
-                            <p>Whether you have a new project, a question, or just want to say hi — feel free to reach out.</p>
+                            <p>Whether it is a new project, a question, or just a hello — feel free to reach out on any of these.</p>
                         </div>
 
                         <!-- نموذج التواصل يرسل الرسائل إلى هذا البريد تلقائياً (عبر خدمة FormSubmit) -->
                         <a href="mailto:devsajedabdu2025@gmail.com" class="contact-item">
-                            <span class="ci-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span class="ci-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
                             <div><small>Email</small><strong>devsajedabdu2025@gmail.com</strong></div>
                         </a>
                         <a href="https://wa.me/972567757096" class="contact-item" target="_blank" rel="noopener">
-                            <span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                            <span class="ci-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
                             <div><small>WhatsApp / Phone</small><strong>+972 567757096</strong></div>
                         </a>
+                        <a href="https://github.com/devsajedabdu2025" class="contact-item" target="_blank" rel="noopener">
+                            <span class="ci-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                            <div><small>GitHub</small><strong>devsajedabdu2025</strong></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sajed-abdu-07357841b" class="contact-item" target="_blank" rel="noopener">
+                            <span class="ci-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+                            <div><small>LinkedIn</small><strong>Sajed Abdu</strong></div>
+                        </a>
                         <div class="contact-item">
-                            <span class="ci-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span class="ci-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
                             <div><small>Location</small><strong>Gaza, Palestine</strong></div>
                         </div>
                     </div>
 
-                    <form class="contact-form reveal" id="contactForm" style="--delay:.15s">
+                    <form class="contact-form reveal" id="contactForm" style="--delay:.15s" aria-label="Contact form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                                <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?">
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." minlength="10" required></textarea>
                         </div>
                         <!-- حقل مخفي لاصطياد رسائل السبام (البرامج الآلية تملؤه، والبشر لا يرونه) -->
                         <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-                        <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
                     </form>
                 </div>
             </div>
@@ -538,18 +623,34 @@
     <!-- ================= الفوتر ================= -->
     <footer class="footer">
         <div class="container footer-inner">
-            <a href="#home" class="logo">Sajed<span>.</span></a>
-            <p>© <span id="year"></span> Sajed Abdu. All rights reserved.</p>
-            <div class="socials">
-                <a href="https://wa.me/972567757096" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:devsajedabdu2025@gmail.com" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" class="social-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sajed-abdu-07a57841b" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <div class="footer-brand">
+                <a href="#home" class="logo">Sajed<span>.</span></a>
+                <p>Web &amp; Front-End Developer — Gaza, Palestine</p>
             </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="socials">
+                <a href="https://github.com/devsajedabdu2025" class="social-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/sajed-abdu-07357841b" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://wa.me/972567757096" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="mailto:devsajedabdu2025@gmail.com" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="year"></span> Sajed Abdu. All rights reserved.</p>
+            <p>Built with HTML, CSS &amp; JavaScript.</p>
         </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>

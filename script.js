@@ -1,5 +1,6 @@
 /* =====================================================
-   سكربت الموقع الشخصي
+   سكربت الموقع الشخصي — Sajed Abdu
+   كل قسم مرقّم ومشروح، وتقدر تعدّل أي جزء لوحده.
    ===================================================== */
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
@@ -19,13 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const setMenu = (open) => {
         nav.classList.toggle('open', open);
         menuToggle.setAttribute('aria-expanded', open);
+        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         menuToggle.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
     };
 
     menuToggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
     nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+    // الإغلاق بالضغط خارج القائمة أو بزر Escape
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuToggle.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
+            setMenu(false);
+            menuToggle.focus();
+        }
     });
 
     /* ---------- 3) الهيدر وزر العودة للأعلى عند التمرير ---------- */
@@ -42,13 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0 }));
 
-    /* ---------- 4) تمييز رابط القسم الحالي ---------- */
+    /* ---------- 4) تمييز رابط القسم الحالي في القائمة ---------- */
     const navLinks = document.querySelectorAll('.nav-link');
     const sectionSpy = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
             navLinks.forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                const isActive = link.getAttribute('href') === '#' + entry.target.id;
+                link.classList.toggle('active', isActive);
+                // aria-current يخبر قارئ الشاشة بالقسم الحالي
+                if (isActive) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
             });
         });
     }, { rootMargin: '-45% 0px -50% 0px' });
@@ -82,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, 2200);
     }
 
-    /* ---------- 6) عدّاد الأرقام ---------- */
+    /* ---------- 6) عدّاد الأرقام (يعمل إذا أعدت إظهار شريط الأرقام) ---------- */
     const animateCounter = (el) => {
         const target = Number(el.dataset.target);
-
         const duration = 1600;
         const start = performance.now();
+
         const step = (now) => {
             const progress = Math.min((now - start) / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
@@ -125,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ---------- 8) فلترة المشاريع ---------- */
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const projectsEmpty = document.getElementById('projectsEmpty');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -132,15 +150,21 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('active');
 
             const filter = button.dataset.filter;
+            let shown = 0;
+
             projectCards.forEach(card => {
                 const match = filter === 'all' || card.dataset.category === filter;
                 card.classList.toggle('hide', !match);
                 if (match) {
+                    shown++;
                     card.classList.remove('pop');
                     void card.offsetWidth; // لإعادة تشغيل الحركة
                     card.classList.add('pop');
                 }
             });
+
+            // رسالة تظهر إذا كان التصنيف فارغاً
+            if (projectsEmpty) projectsEmpty.hidden = shown > 0;
         });
     });
 
@@ -153,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- 9.5) ميلان الصورة الشخصية ثلاثي الأبعاد مع الماوس ---------- */
+    /* ---------- 10) ميلان الصورة الشخصية ثلاثي الأبعاد مع الماوس ---------- */
     const heroVisual = document.querySelector('.hero-visual');
     const avatar = document.querySelector('.avatar');
     if (heroVisual && avatar && !reduceMotion && window.matchMedia('(hover: hover)').matches) {
@@ -168,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ---------- 10) نموذج التواصل ---------- */
+    /* ---------- 11) نموذج التواصل (يرسل إلى بريدك عبر FormSubmit) ---------- */
     const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
     let toastTimer;
@@ -181,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toastTimer = setTimeout(() => toast.classList.remove('show'), 6000);
     };
 
-    // يأخذ بريدك من رابط البريد في قسم التواصل — الرسائل تصل إليه عبر خدمة FormSubmit المجانية
+    // البريد يؤخذ تلقائياً من رابط البريد في قسم التواصل — عدّله هناك فقط
     const emailLink = document.querySelector('.contact-item[href^="mailto:"]');
     const myEmail = emailLink.getAttribute('href').replace('mailto:', '');
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -197,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // FormSubmit لا يعمل عند فتح الملف مباشرة من الجهاز
+        // FormSubmit لا يعمل عند فتح الملف مباشرة من الجهاز (file://)
         if (location.protocol === 'file:') {
             showToast('⚠️ Open the site from a web server (e.g. VS Code Live Server) to send messages.', true);
             return;
@@ -240,6 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ---------- 11) سنة حقوق النشر ---------- */
+    /* ---------- 12) سنة حقوق النشر ---------- */
     document.getElementById('year').textContent = new Date().getFullYear();
 });
